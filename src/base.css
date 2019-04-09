@@ -1,0 +1,139 @@
+body, html {
+  height: 100%;
+}
+
+#profile_container {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('./media/background.jpg');
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+}
+
+.parallax_content {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  float: right;
+  background: white;
+  -webkit-box-shadow: -4px 0px 20px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: -4px 0px 20px 2px rgba(0,0,0,0.75);
+  box-shadow: -4px 0px 20px 2px rgba(0,0,0,0.75);
+}
+
+.parallax_title {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: fixed;
+}
+
+.parallax_title .caption,
+.parallax_content .content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.parallax_title .caption h1,
+.parallax_title .caption ul.vertical-list {
+  width: 50%;
+  margin: auto;
+  text-align: left;
+}
+
+.parallax_title .caption h1 {
+  font-size: 5em;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+.parallax_title .caption ul.vertical-list {
+  padding: 0;
+  padding-top: .5em;
+  background: rgba(0,0,0,0.75);
+  padding-left: .5em;
+  border-radius: 25px;
+}
+
+.parallax_title .caption ul.vertical-list a div,
+.parallax_title .caption ul.vertical-list a div div {
+  display: inline;
+}
+
+.parallax_content .content img {
+  max-width: 100%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+ul.vertical-list li {
+  display: inline;
+  padding-right: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .parallax_title {
+    width: 100%;
+  }
+
+  .parallax_content {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    padding: 1em;
+    width: 100%;
+  }
+
+  .parallax_content .content,
+  .parallax_title .caption {
+    position: relative;
+    transform: inherit;
+  }
+
+  .parallax_title .caption {
+    top: 0;
+  }
+
+  .parallax_title .caption h1 {
+    font-size: 4em;
+    margin: 0;
+  }
+}
+
+.fade-in {
+  padding-top: 0em;
+  animation-name: bottomFadeOut;
+  animation-duration: 3s;
+}
+
+@keyframes bottomFadeOut {
+  0% {
+    padding-top: 1em;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
