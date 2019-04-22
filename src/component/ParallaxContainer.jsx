@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 
-import TitleContainer from "./TitleContainer.jsx";
-import ContentContainer from "./ContentContainer.jsx";
-
 class ParallaxContainer extends Component {
   render() {
+    const divStyle = {
+      backgroundImage: 'url(' + this.props.bgLink + ')',
+    };
+
     return (
-      <div className="parallax">
-        <TitleContainer />
-        <ContentContainer />
+      <div
+        className="parallax"
+        style={divStyle}
+        >
+        {this.props.children}
       </div>
     );
   }
