@@ -6,7 +6,7 @@ class ContentContainer extends Component {
   render() {
     return (
       <div className="parallax_content">
-        <div className="content fade-in">
+        <div className="content hidden">
           <img src={profile_image} />
         </div>
       </div>

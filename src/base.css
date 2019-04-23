@@ -118,6 +118,10 @@ ul.vertical-list li {
   }
 }
 
+.hidden {
+  opacity: 0;
+}
+
 .fade-in {
   padding-top: 0em;
   animation-name: bottomFadeOut;

@@ -22,7 +22,6 @@ class HomeContainer extends Component {
         <ParallaxContainer
           bgLink="http://images5.fanpop.com/image/photos/30900000/-Random-random-30915836-1280-800.jpg"
         >
-          <TitleContainer />
           <ContentContainer />
         </ParallaxContainer>
       </div>
