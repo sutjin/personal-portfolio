@@ -83,6 +83,12 @@ body, html {
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
+.parallax_content .content div {
+  width: 75%;
+  margin: auto;
+  text-align: left;
+}
+
 ul.vertical-list li {
   display: inline;
   padding-right: 1em;
