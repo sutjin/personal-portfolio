@@ -2,14 +2,11 @@ body, html {
   height: 100%;
 }
 
-#profile_container {
+#profile_container, #main_wrapper {
   height: 100%;
 }
 
 .parallax {
-  /* The image used */
-  background-image: url('./media/background.jpg');
-
   /* Full height */
   height: 100%;
 
@@ -27,9 +24,9 @@ body, html {
   height: 100%;
   float: right;
   background: white;
-  -webkit-box-shadow: -4px 0px 20px 2px rgba(0,0,0,0.75);
-  -moz-box-shadow: -4px 0px 20px 2px rgba(0,0,0,0.75);
-  box-shadow: -4px 0px 20px 2px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0 25px 25px -5px #333;
+  -moz-box-shadow: 0 25px 25px -5px #333;
+  box-shadow: 0 25px 25px -5px #333;
 }
 
 .parallax_title {
@@ -86,6 +83,12 @@ body, html {
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
+.parallax_content .content div {
+  width: 75%;
+  margin: auto;
+  text-align: left;
+}
+
 ul.vertical-list li {
   display: inline;
   padding-right: 1em;
@@ -95,11 +98,12 @@ ul.vertical-list li {
   /* For mobile phones: */
   .parallax_title {
     width: 100%;
+    height: 50%;
+    float: none;
+    position: static;
   }
 
   .parallax_content {
-    position: absolute;
-    bottom: 0;
     height: auto;
     padding: 1em;
     width: 100%;
@@ -119,6 +123,14 @@ ul.vertical-list li {
     font-size: 4em;
     margin: 0;
   }
+
+  .mobile-padding {
+    height: 50%;
+  }
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .fade-in {

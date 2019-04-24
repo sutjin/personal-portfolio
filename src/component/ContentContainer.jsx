@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 
-import profile_image from "../media/profile_image.jpg";
-
 class ContentContainer extends Component {
   render() {
     return (
       <div className="parallax_content">
-        <div className="content fade-in">
-          <img src={profile_image} />
+        <div className="content hidden">
+          {this.props.children}
         </div>
       </div>
     );
