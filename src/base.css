@@ -98,11 +98,12 @@ ul.vertical-list li {
   /* For mobile phones: */
   .parallax_title {
     width: 100%;
+    height: 50%;
+    float: none;
+    position: static;
   }
 
   .parallax_content {
-    position: absolute;
-    bottom: 0;
     height: auto;
     padding: 1em;
     width: 100%;
@@ -121,6 +122,10 @@ ul.vertical-list li {
   .parallax_title .caption h1 {
     font-size: 4em;
     margin: 0;
+  }
+
+  .mobile-padding {
+    height: 50%;
   }
 }
 

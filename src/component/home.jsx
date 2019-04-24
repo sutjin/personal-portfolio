@@ -26,6 +26,7 @@ class HomeContainer extends Component {
         <ParallaxContainer
           bgLink={bg_image_2}
         >
+          <div className="mobile-padding" />
           <ContentContainer>
             <div>
               <h2>Hello</h2>
