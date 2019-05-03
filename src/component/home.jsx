@@ -4,12 +4,14 @@ import ReactDOM from "react-dom";
 import ParallaxContainer from "./ParallaxContainer.jsx"
 import TitleContainer from "./TitleContainer.jsx";
 import ContentContainer from "./ContentContainer.jsx";
+import ProjectContainer from "./ProjectContainer.jsx";
 
 import profile_image from "../media/profile_image.jpg";
 import bg_image_1 from "../media/background.jpg";
 import bg_image_2 from "../media/background_1.jpg";
+import bg_image_3 from "../media/background_3.jpg";
 
-
+import npm_img from "../media/npm-logo.png"
 
 class HomeContainer extends Component {
   render() {
@@ -28,7 +30,7 @@ class HomeContainer extends Component {
         >
           <div className="mobile-padding" />
           <ContentContainer>
-            <div>
+            <div className="container">
               <h2>Hello</h2>
 
               <p>
@@ -38,6 +40,24 @@ class HomeContainer extends Component {
               <p>
               I truly believe that my passion has led me to where I am today; connecting with different individuals as I travel has helped me learn new ways to solve problems and even given me ideas on what to build next. As I document my journey through video and photography, the learnings and challenges i set forth to myself ensure that I will never stop learning.
               </p>
+            </div>
+          </ContentContainer>
+        </ParallaxContainer>
+        <ParallaxContainer
+          bgLink={bg_image_3}
+        >
+          <div className="mobile-padding" />
+          <ContentContainer>
+            <div className="container">
+              <h2>My On Going</h2>
+              <p>Tid bit about my ongoing project</p>
+              <hr />
+              <ProjectContainer
+                image={npm_img}
+                link="https://www.npmjs.com/package/google-recaptcha-react-component"
+                title="Google ReCaptcha React Component"
+                description="Easy to use React Component to protect your form using Google's ReCaptcha."
+              />
             </div>
           </ContentContainer>
         </ParallaxContainer>

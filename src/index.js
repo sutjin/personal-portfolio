@@ -2,6 +2,11 @@ import css from "./base.css";
 import HomeContainer from "./component/home.jsx";
 import $ from "jquery";
 
+function isMobile() {
+    var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+    return isMobile.matches ? true : false
+}
+
 function fadeInOnScroll($elem) {
   $(window).on('scroll', function() {
     const $window = $(window),
@@ -18,10 +23,17 @@ function fadeInOnScroll($elem) {
 }
 
 $(function() {
+  var mobile = isMobile();
+
   $('.parallax_content .content').each(function(index) {
     const id_name = "content_" + index;
     $( this ).attr("id", id_name)
-    fadeInOnScroll($("#" + id_name))
+    if (!mobile) {
+      fadeInOnScroll($("#" + id_name))
+    } else {
+      $('#' + id_name).removeClass('hidden');
+      $('#' + id_name).addClass('fade-in');
+    }
   });
 
   if ($('#content_0').is(':visible')) {
