@@ -5,6 +5,7 @@ import github_icon from '../media/iconfinder_Github.svg';
 import instagram_icon from '../media/iconfinder_Instagram.svg';
 import linkedin_icon from '../media/iconfinder_LinkedIn.svg';
 import youtube_icon from '../media/iconfinder_Youtube.svg';
+import medium_icon from '../media/medium.svg';
 
 class TitleContainer extends Component {
   render() {
@@ -21,6 +22,13 @@ class TitleContainer extends Component {
               <a href="https://github.com/sutjin" target="_blank">
                 <ReactSVG
                   src={github_icon}
+                  svgStyle={{ width: 25, height: 25 }} />
+              </a>
+            </li>
+            <li>
+              <a href="https://medium.com/@NbilzDy" target="_blank">
+                <ReactSVG
+                  src={medium_icon}
                   svgStyle={{ width: 25, height: 25 }} />
               </a>
             </li>
