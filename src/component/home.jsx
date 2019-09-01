@@ -34,7 +34,7 @@ class HomeContainer extends Component {
               <h2>Hello</h2>
 
               <p>
-              My name is Nabil Sutjipto, and I am a Software Engineer based in Seattle, WA. I’m passionate in travel and exploration, which is the reason I am currently with Expedia, helping travelers like myself stay at ease by building solutions to help answer the uncertainty of travel. My areas of exploration goes beyond physical location as I also translate it to my engineering experience; to date I have built solutions for product personalization based on preference, connecting communities through the web, build on technologies to help talented people be found and working on open source projects.  I am currently developing in React.js, Node.js and Phyton.
+              My name is Nabil Sutjipto, and I am a Software Engineer based in Seattle, WA. I’m passionate in travel and exploration, which is the reason I am currently with Expedia, helping travelers like myself stay at ease by building solutions to help answer the uncertainty of travel. My areas of exploration goes beyond physical location as I also translate it to my engineering experience; to date I have built solutions for product personalization based on preference, connecting communities through the web, build on technologies to help talented people be found and working on open source projects.  I am currently developing in React.js, Node.js and Python.
               </p>
 
               <p>

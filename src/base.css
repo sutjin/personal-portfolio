@@ -134,6 +134,10 @@ ul.vertical-list li {
     float: none;
   }
 
+  .parallax_content .content .container {
+    width: 75%;
+  }
+
   .parallax_content .content,
   .parallax_title .caption {
     position: relative;
