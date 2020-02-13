@@ -34,11 +34,24 @@ class HomeContainer extends Component {
               <h2>Hello</h2>
 
               <p>
-              My name is Nabil Sutjipto, and I am a Software Engineer based in Seattle, WA. I’m passionate in travel and exploration, which is the reason I am currently with Expedia, helping travelers like myself stay at ease by building solutions to help answer the uncertainty of travel. My areas of exploration goes beyond physical location as I also translate it to my engineering experience; to date I have built solutions for product personalization based on preference, connecting communities through the web, build on technologies to help talented people be found and working on open source projects.  I am currently developing in React.js, Node.js and Python.
+              My name is Nabil, a software engineer currently developing machine learning capabilities with Expedia in India.
               </p>
 
               <p>
-              I truly believe that my passion has led me to where I am today; connecting with different individuals as I travel has helped me learn new ways to solve problems and even given me ideas on what to build next. As I document my journey through video and photography, the learnings and challenges i set forth to myself ensure that I will never stop learning.
+              On weekdays I develop software with React.js, Node.js annd Python.
+              </p>
+
+              <p>
+              On weekends I love to explore my creative side through videography and music.
+              </p>
+
+              <p>
+              To me, having a creative space has helped me built solutions such as a subscription box content optimizer,
+              resuable chat box using React.js and even an open source project!
+              </p>
+
+              <p>
+              check out my work through the links under my name.
               </p>
             </div>
           </ContentContainer>

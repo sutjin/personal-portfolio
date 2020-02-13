@@ -1,6 +1,11 @@
 import css from "./base.css";
+import ReactGA from "react-ga";
 import HomeContainer from "./component/home.jsx";
 import $ from "jquery";
+
+const trackingId = "#"; // Saved in secret file
+ReactGA.initialize(trackingId);
+ReactGA.pageview(window.location.pathname);
 
 function isMobile() {
     var isMobile = window.matchMedia("only screen and (max-width: 760px)");

@@ -1,11 +1,35 @@
 import React, { Component } from "react";
-import ReactSVG from 'react-svg'
+import ReactSVG from 'react-svg';
+import SocialIconComponent from "./SocialIconComponent.jsx";
 
 import github_icon from '../media/iconfinder_Github.svg';
-import instagram_icon from '../media/iconfinder_Instagram.svg';
 import linkedin_icon from '../media/iconfinder_LinkedIn.svg';
 import youtube_icon from '../media/iconfinder_Youtube.svg';
 import medium_icon from '../media/medium.svg';
+import mixcloud_icon from '../media/iconfinder_mixcloud.svg';
+
+const SOCIAL_LINK = [
+  {
+    "link": "https://github.com/sutjin",
+    "icon": github_icon
+  },
+  {
+    "link": "https://www.linkedin.com/in/nabilsutjipto",
+    "icon": linkedin_icon
+  },
+  {
+    "link": "https://medium.com/@NbilzDy",
+    "icon": medium_icon
+  },
+  {
+    "link": "https://www.youtube.com/channel/UC1p7qlwFF-dI2vmE2UHrHXw",
+    "icon": youtube_icon
+  },
+  {
+    "link": "https://www.mixcloud.com/Nbilzdy/",
+    "icon": mixcloud_icon
+  }
+]
 
 class TitleContainer extends Component {
   render() {
@@ -18,41 +42,9 @@ class TitleContainer extends Component {
           </h1>
           <br />
           <ul className="vertical-list fade-in">
-            <li>
-              <a href="https://github.com/sutjin" target="_blank">
-                <ReactSVG
-                  src={github_icon}
-                  svgStyle={{ width: 25, height: 25 }} />
-              </a>
-            </li>
-            <li>
-              <a href="https://medium.com/@NbilzDy" target="_blank">
-                <ReactSVG
-                  src={medium_icon}
-                  svgStyle={{ width: 25, height: 25 }} />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/nbilzdy/" target="_blank">
-                <ReactSVG
-                  src={instagram_icon}
-                  svgStyle={{ width: 25, height: 25 }} />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/channel/UC1p7qlwFF-dI2vmE2UHrHXw" target="_blank">
-                <ReactSVG
-                  src={youtube_icon}
-                  svgStyle={{ width: 25, height: 25 }} />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/nabilsutjipto" target="_blank">
-                <ReactSVG
-                  src={linkedin_icon}
-                  svgStyle={{ width: 25, height: 25 }} />
-              </a>
-            </li>
+            {SOCIAL_LINK.map((value, index) => {
+              return <SocialIconComponent key={index} link={value.link} icon={value.icon}/>
+            })}
           </ul>
         </div>
       </div>
