@@ -1,7 +1,10 @@
-import css from "./base.css";
+import "./base.css";
+import ReactDOM from "react-dom";
+import React from "react";
 import ReactGA from "react-ga";
 import HomeContainer from "./component/home.jsx";
 import $ from "jquery";
+
 
 const trackingId = "#"; // Saved in secret file
 ReactGA.initialize(trackingId);
@@ -46,3 +49,6 @@ $(function() {
     $('#content_0').addClass('fade-in');
   }
 });
+
+const wrapper = document.getElementById("profile_container");
+wrapper ? ReactDOM.render(<HomeContainer />, wrapper) : false;

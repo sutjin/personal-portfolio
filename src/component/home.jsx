@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 
 import ParallaxContainer from "./ParallaxContainer.jsx"
 import TitleContainer from "./TitleContainer.jsx";
 import ContentContainer from "./ContentContainer.jsx";
 import ProjectContainer from "./ProjectContainer.jsx";
+import PopUpComponent from "./popup/popup.jsx";
 
 import profile_image from "../media/profile_image.jpg";
 import bg_image_1 from "../media/background.jpg";
@@ -17,6 +17,9 @@ class HomeContainer extends Component {
   render() {
     return (
       <div id="main_wrapper">
+
+        <PopUpComponent />
+
         <ParallaxContainer
           bgLink={bg_image_1}
         >
@@ -80,6 +83,3 @@ class HomeContainer extends Component {
 }
 
 export default HomeContainer;
-
-const wrapper = document.getElementById("profile_container");
-wrapper ? ReactDOM.render(<HomeContainer />, wrapper) : false;

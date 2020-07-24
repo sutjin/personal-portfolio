@@ -22,6 +22,21 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: "[local]___[hash:base64:5]",
+            },
+          },
+          'sass-loader',
+        ],
+      },
+      {
          test: /\.(png|svg|jpg|gif)$/,
          use: [
            'file-loader'

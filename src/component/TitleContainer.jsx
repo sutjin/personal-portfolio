@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactSVG from 'react-svg';
 import SocialIconComponent from "./SocialIconComponent.jsx";
 
 import github_icon from '../media/iconfinder_Github.svg';
