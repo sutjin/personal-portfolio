@@ -6,35 +6,23 @@ import Item from './item.jsx';
 
 import profile_image from "../../media/profile_image.jpg";
 
-// TODO: later create this as an API
-const BASE_WORK = [
-  {
-    "title": "B-Roll: Shimla, the summer capital",
-    "link": "https://youtu.be/CTeCtSxgVzc",
-    "type": "youtube"
-  },
-  {
-    "title": "Minimix: Feeling Homesick",
-    "link": "https://www.mixcloud.com/Nbilzdy/february-minimix-2020/",
-    "type": "mixcloud"
-  },
-  {
-    "title": "How I remember 10 years of my life",
-    "link": "https://medium.com/@NbilzDy/how-i-remembered-10-years-of-my-life-2b6649a59027",
-    "type": "medium"
-  },
-  {
-    "title": "Jaipur, The pink city (Cinematic)",
-    "link": "https://youtu.be/sEotv7TK8ns",
-    "type": "youtube"
-  }
-];
+
+async function geLatestWork(setState) {
+    const response = await fetch('./public/latest.json');
+    const data = await response.json();
+    setState(data);
+}
 
 
 function popup() {
-  const divStyle = {
-    backgroundImage: `url(${profile_image})`,
-  };
+    const [state, setState] = React.useState({ 'latest': [] });
+    const divStyle = {
+        backgroundImage: `url(${profile_image})`,
+    };
+
+    React.useEffect(() => {
+        geLatestWork(setState)
+    }, []);
 
   return (
     <div>
@@ -63,9 +51,9 @@ function popup() {
               </div>
             </div>
             <div className={styles.bottom}>
-              {BASE_WORK.map((value, index) => {
-                return <Item key={index} link={value.link} type={value.type} title={value.title}/>
-              })}
+                {state.latest.map((value, index) => {
+                    return <Item key={index} link={value.link} type={value.type} title={value.title}/>
+                })}
             </div>
           </div>
         </div>

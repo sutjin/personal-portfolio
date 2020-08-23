@@ -1,5 +1,5 @@
 # Build project
-dist/*
+dist/
 
 # Logs
 logs
