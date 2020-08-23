@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from "jquery";
+import { isMobile } from "../../index.js";
 import styles from "./styles.scss";
 import Item from './item.jsx';
 
@@ -14,7 +15,7 @@ const BASE_WORK = [
   },
   {
     "title": "Minimix: Feeling Homesick",
-    "link": "https://youtu.be/CTeCtSxgVzc",
+    "link": "https://www.mixcloud.com/Nbilzdy/february-minimix-2020/",
     "type": "mixcloud"
   },
   {
@@ -75,7 +76,7 @@ function popup() {
 
 
 $(function() {
-  if (window.location.href.indexOf("#latest") > -1) {
+  if (isMobile()) {
     $("#latest-work").addClass(styles.expand);
   }
 });

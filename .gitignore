@@ -1,5 +1,5 @@
 # Build project
-dist/
+dist/*
 
 # Logs
 logs
@@ -62,3 +62,6 @@ typings/
 
 # next.js build output
 .next
+
+# Visual studio folder
+.vs/

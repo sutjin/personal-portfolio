@@ -50,5 +50,7 @@ $(function() {
   }
 });
 
+export { isMobile };
+
 const wrapper = document.getElementById("profile_container");
 wrapper ? ReactDOM.render(<HomeContainer />, wrapper) : false;
